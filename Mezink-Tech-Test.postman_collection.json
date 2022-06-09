@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "f0e661ee-0a08-4696-8540-1350a7ae5644",
+		"name": "Mezink-Tech-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15222960"
+	},
+	"item": [
+		{
+			"name": "create record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Zhorif Januardi\",\n    \"marks\" : [100,99,98,97,90]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"records"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create record",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Faizatul Ulya\",\n    \"marks\" : [100,79,78,70,90]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/records",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"records"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 15:08:24 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "152"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 0,\n    \"msg\": \"Success\",\n    \"records\": [\n        {\n            \"id\": 7,\n            \"name\": \"Faizatul Ulya\",\n            \"marks\": [\n                100,\n                79,\n                78,\n                70,\n                90\n            ],\n            \"createdAt\": \"2022-06-09T15:08:25.719695831Z\"\n        }\n    ],\n    \"error\": \"\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get all record",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"records"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all record",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/records",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"records"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 15:08:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "755"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 0,\n    \"msg\": \"Success\",\n    \"records\": [\n        {\n            \"id\": 1,\n            \"name\": \"Abdul Aziz\",\n            \"marks\": [\n                75,\n                80,\n                90,\n                50,\n                60\n            ],\n            \"createdAt\": \"2022-06-09T14:04:06.789897Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Abdul Aziz Alghifari\",\n            \"marks\": [\n                90,\n                80,\n                80,\n                70,\n                90\n            ],\n            \"createdAt\": \"2022-06-09T14:06:03.265657Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Fazha Ivanda\",\n            \"marks\": [\n                100,\n                100,\n                100,\n                100,\n                100\n            ],\n            \"createdAt\": \"2022-06-09T14:06:30.637893Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Fauzi Rizky\",\n            \"marks\": [\n                80,\n                90,\n                100,\n                100,\n                100\n            ],\n            \"createdAt\": \"2022-06-09T14:06:58.773467Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Ahmad Fikri\",\n            \"marks\": [\n                80,\n                90,\n                70,\n                100,\n                100\n            ],\n            \"createdAt\": \"2022-06-09T14:07:11.589743Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Zhorif Januardi\",\n            \"marks\": [\n                100,\n                99,\n                98,\n                97,\n                90\n            ],\n            \"createdAt\": \"2022-06-09T15:00:39.465225Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Faizatul Ulya\",\n            \"marks\": [\n                100,\n                79,\n                78,\n                70,\n                90\n            ],\n            \"createdAt\": \"2022-06-09T15:08:25.719695Z\"\n        }\n    ],\n    \"error\": \"\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get record by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/records/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"records",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get record by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/records/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"records",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 15:08:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 0,\n    \"msg\": \"Success\",\n    \"records\": [\n        {\n            \"id\": 6,\n            \"name\": \"Zhorif Januardi\",\n            \"marks\": [\n                100,\n                99,\n                98,\n                97,\n                90\n            ],\n            \"createdAt\": \"2022-06-09T15:00:39.465225Z\"\n        }\n    ],\n    \"error\": \"\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get all record filter by totalMarks and createdAt",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\" : \"2022-06-08\",\n    \"endDate\" : \"2022-06-10\",\n    \"minCount\" : 400,\n    \"maxCount\" : 500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/records-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"records-filter"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all record filter by totalMarks and createdAt",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\" : \"2022-06-08\",\n    \"endDate\" : \"2022-06-10\",\n    \"minCount\" : 400,\n    \"maxCount\" : 500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/records-filter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"records-filter"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 09 Jun 2022 15:09:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "457"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 0,\n    \"msg\": \"Success\",\n    \"records\": [\n        {\n            \"id\": 2,\n            \"totalMarks\": 410,\n            \"createdAt\": \"2022-06-09T14:06:03.265657Z\"\n        },\n        {\n            \"id\": 3,\n            \"totalMarks\": 500,\n            \"createdAt\": \"2022-06-09T14:06:30.637893Z\"\n        },\n        {\n            \"id\": 4,\n            \"totalMarks\": 470,\n            \"createdAt\": \"2022-06-09T14:06:58.773467Z\"\n        },\n        {\n            \"id\": 5,\n            \"totalMarks\": 440,\n            \"createdAt\": \"2022-06-09T14:07:11.589743Z\"\n        },\n        {\n            \"id\": 6,\n            \"totalMarks\": 484,\n            \"createdAt\": \"2022-06-09T15:00:39.465225Z\"\n        },\n        {\n            \"id\": 7,\n            \"totalMarks\": 417,\n            \"createdAt\": \"2022-06-09T15:08:25.719695Z\"\n        }\n    ],\n    \"error\": \"\"\n}"
+				}
+			]
+		}
+	]
+}

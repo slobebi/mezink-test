@@ -1,0 +1,33 @@
+version: '2.5'
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=sloabd123
+      - POSTGRES_DB=mezink
+    ports:
+      - 1234:5432
+    volumes:
+      - database_postgres:/var/lib/postgresql/data
+    networks:
+      - fullstack
+
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    restart: on-failure
+    depends_on:
+      - db
+    networks:
+      - fullstack
+
+volumes:
+  database_postgres:
+
+networks:
+  fullstack:
+    driver: bridge
